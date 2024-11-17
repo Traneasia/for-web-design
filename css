@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: grid;
+    flex-direction: column;
+    min-height: 100;
+
+    
+  }
+  
+  .container {
+    flex: 1;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "header"
+      "navigation"
+      "body"
+      "footer";
+    height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 2px solid #000;
+  }
+  
+  .header {
+    grid-area: header;
+    background-color: #eaeaea;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .navigation {
+    grid-area: navigation;
+    background-color: #ddd;
+    text-align: center;
+    line-height: 50px;
+  }
+  
+  .body {
+    grid-area: body;
+    background-color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  /*--- Main Content--- */
+.main-content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h2 {
+    color: #d83434;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/*--- Filters and Search---- */
+.filters-search {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.filters button, .search-bar button {
+    background-color: #efefef;
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.search-bar input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+/*--- Events--- */
+.events-layout {
+    display: flex;
+    gap: 20px;
+}
+
+/* Calendar */
+.calendar {
+    width: 25%;
+    flex: 1 1 16px;
+}
+
+.calendar h3 {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+
+}
+
+.day {
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Event Cards */
+.grid-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: end;
+    padding: 20px;
+}
+
+.grid-item {
+    background: color #f9f9f9;;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.grid-item h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.grid-item p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+  .footer {
+    grid-column rest grid
+    grid-area: footer;
+    background-color: #eaeaea;
+    text-align: center;
+    line-height: 50px;
+  }
